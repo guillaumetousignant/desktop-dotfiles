@@ -1,0 +1,250 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "bottom", // Waybar position (top|bottom|left|right)
+    "height": 32, // Waybar height (to be removed for auto height)
+    // "width": 1280, // Waybar width
+    "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": ["custom/launcher", "sway/workspaces", "sway/window", "sway/mode", "sway/scratchpad", "custom/weather", "custom/media"],
+    "modules-right": ["custom/notification", "tray", "bluetooth", "network", "pulseaudio", "battery", "battery#bat2", "clock", "custom/powermenu"],
+    // Modules configuration
+    // "sway/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "warp-on-scroll": false,
+    //     "format": "{name}: {icon}",
+    //     "format-icons": {
+    //         "1": "",
+    //         "2": "",
+    //         "3": "",
+    //         "4": "",
+    //         "5": "",
+    //         "urgent": "",
+    //         "focused": "",
+    //         "default": ""
+    //     }
+    // },
+    "keyboard-state": {
+        //"numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "sway/mode": {
+        "format": "<span style=\"italic\">{}</span>"
+    },
+    "sway/scratchpad": {
+        "format": "{icon} {count}",
+        "show-empty": false,
+        "format-icons": ["", ""],
+        "tooltip": true,
+        "tooltip-format": "{app}: {title}"
+    },
+    "sway/workspaces": {
+    	"disable-scroll": true,
+    	"all-outputs": true,
+    	"persistent_workspaces": {
+    		"1": [],
+    		"2": [],
+    		"3": [],
+    		"4": [],
+    		"5": []
+    	},
+    	"format": "{icon}",
+        "format-icons": {
+            "urgent": "",
+            "active": "",
+            "default": "",
+        },
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        // "timezone": "America/New_York",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "cpu": {
+        "format": "{usage}% ",
+         "on-click": "foot -e toolbox run htop"
+    },
+    "memory": {
+        "format": "{}% ",
+         "on-click": "foot -e toolbox run htop --sort-key=M_VIRT"
+    },
+    "disk": {
+        "format": "{percentage_used}% 󱘲",
+        "path": "/",
+        "on-click": "foot -e toolbox run ncdu /"
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󱐋",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "",
+        "format-ethernet": "󰌗",
+        "tooltip-format": "{ifname} via {gwaddr} 󰈀",
+        "format-linked": "{ifname} (No IP) 󰲝",
+        "format-disconnected": "Disconnected ⚠",
+        "on-click": "nm-connection-editor"
+    },
+    "network#vpn": {
+        "interface": "wg0",
+        "format": "󰍁"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon}",
+        "format-bluetooth": "{icon}",
+        "format-bluetooth-muted": " {icon}",
+        "format-muted": " ",
+        "format-source": "",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "󰋋",
+            "hands-free": "󰢺",
+            "headset": "󰋎",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol",
+        "on-scroll-up": "amixer -q sset Master 1%+",
+        "on-scroll-down": "amixer -q sset Master 1%-"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "bluetooth": {
+   	    "format-disabled": "",
+   	    "format-off": "󰂲",
+   	    "format-on": "󰂯",
+   	    "format-connected": "󰂯 {device_alias}",
+   	    "format-connected-battery": "󰂯 {device_alias} 󱐋 {device_battery_percentage}%",
+   	    "on-click": "blueman-manager",
+   	    "tooltip": false
+   	},
+
+	// Custom modules
+	// From https://github.com/PoSayDone/.dotfiles_wayland/tree/main
+    "custom/notification": {
+	    "tooltip": false,
+	    "format": "{icon}",
+	    "format-icons": {
+	        "notification": "<span foreground='red'><sup></sup></span>",
+	        "none": "",
+	        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+	        "dnd-none": "",
+	        "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+	        "inhibited-none": "",
+	        "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+	        "dnd-inhibited-none": ""
+	    },
+	    "return-type": "json",
+	    "exec-if": "which swaync-client",
+	    "exec": "swaync-client -swb",
+	    "on-click": "swaync-client -t -sw",
+	    "on-click-right": "swaync-client -d -sw",
+	    "escape": true
+	},
+	// From https://github.com/PoSayDone/.dotfiles_wayland/tree/main
+	"custom/launcher": {
+        "format": "",
+        "on-click": "$HOME/.config/rofi/bin/launcher &",
+        "tooltip": false
+    },
+	// From https://github.com/PoSayDone/.dotfiles_wayland/tree/main
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 1800,
+        "exec": "$HOME/.config/waybar/scripts/wttr.py",
+        "return-type": "json"
+    },
+	// From https://github.com/PoSayDone/.dotfiles_wayland/tree/main
+    "custom/powermenu": {
+        "format": "",
+        "on-click": "$HOME/.config/rofi/bin/powermenu &",
+        "on-click-right": "$HOME/.config/rofi/bin/powermenu &",
+        "tooltip": false
+    },
+}

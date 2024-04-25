@@ -1,0 +1,30 @@
+# name: 'Background theme'
+# url: 'https://github.com/catppuccin/fish'
+# preferred_background: 06042c
+
+fish_color_normal fcfdff
+fish_color_command 1078e1
+fish_color_param 65dffd
+fish_color_keyword f44747
+fish_color_quote b5cea8
+fish_color_redirection c586c0
+fish_color_end f7b865
+fish_color_comment 838da4
+fish_color_error f44747
+fish_color_gray 636b86
+fish_color_selection --background=444a4c
+fish_color_search_match --background=444a4c
+fish_color_option b5cea8
+fish_color_operator c586c0
+fish_color_escape f38ba8
+fish_color_autosuggestion 636b86
+fish_color_cancel f44747
+fish_color_cwd f6e787
+fish_color_user 95f2e6
+fish_color_host 1078e1
+fish_color_host_remote b5cea8
+fish_color_status f44747
+fish_pager_color_progress 636b86
+fish_pager_color_prefix c586c0
+fish_pager_color_completion fcfdff
+fish_pager_color_description 636b86

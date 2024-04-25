@@ -1,0 +1,40 @@
+/*
+*
+* Background palette
+* Maintainer: me
+*
+*/
+
+@define-color base   #fcfdff;
+@define-color mantle #f6fbfe;
+@define-color crust  #e0f4fe;
+
+@define-color text     #06042c;
+@define-color subtext0 #5a6565;
+@define-color subtext1 #444a4c;
+
+@define-color surface0 #d1e3ef;
+@define-color surface1 #c1d2e0;
+@define-color surface2 #a2af2c;
+
+@define-color overlay0 #838da4;
+@define-color overlay1 #636b86;
+@define-color overlay2 #444968;
+
+@define-color blue      #1078e1;
+@define-color sky       #65dffd;
+@define-color teal      #95f2e6;
+@define-color yellow    #f7df82;
+@define-color orange    #f7b865;
+
+@define-color green     #b5cea8;
+@define-color red       #f44747;
+
+@define-color lavender  #7287fd;
+@define-color sapphire  #209fb5;
+@define-color peach     #fe640b;
+@define-color maroon    #e64553;
+@define-color mauve     #8839ef;
+@define-color pink      #ea76cb;
+@define-color flamingo  #dd7878;
+@define-color rosewater #dc8a78;

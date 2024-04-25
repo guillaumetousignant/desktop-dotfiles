@@ -1,0 +1,63 @@
+/**
+ * Base16  ROFI Color theme
+ *
+ * Authors
+ *  Scheme: 
+ *  Template: Jordi Pakey-Rodriguez (https://github.com/0xdec), Andrea Scarpino (https://github.com/ilpianista)
+ */
+
+/**
+ * Changed a bit to catppuccin, then background
+ */
+
+* {
+	base:						 rgba ( 252, 253, 255, 100 % );
+    mantle:						 rgba ( 246, 251, 254, 100 % );
+    crust:						 rgba ( 224, 244, 254, 100 % );
+    text:						 rgba (   6,   4,  44, 100 % );
+    subtext0:					 rgba (  90, 101, 101, 100 % );
+    subtext1:					 rgba (  68,  75,  76, 100 % );
+    surface0:					 rgba ( 209, 227, 239, 100 % );
+    surface1:					 rgba ( 193, 210, 224, 100 % );
+    surface2:					 rgba ( 162, 175, 194, 100 % );
+    overlay0:					 rgba ( 131, 141, 164, 100 % );
+    overlay1:					 rgba (  99, 107, 134, 100 % );
+    overlay2:					 rgba (  68,  73, 104, 100 % );
+    blue:                        rgba (  16, 120, 225, 100 % );
+    sky:						 rgba ( 101, 223, 253, 100 % );
+    teal:						 rgba ( 149, 242, 230, 100 % );
+    orange:						 rgba ( 247, 184, 101, 100 % );
+    yellow:						 rgba ( 247, 223, 130, 100 % );
+    red:                         rgba ( 244,  71,  71, 100 % );
+    green:                       rgba ( 181, 206, 168, 100 % );
+    lavender:                    rgba ( 114, 135, 253, 100 % );
+
+	foreground:                  var(text);
+	background:                  var(base);
+	normal-foreground:           var(foreground);
+	normal-background:           var(background);
+    alternate-normal-foreground: var(foreground);
+    alternate-normal-background: var(lightbg);
+    urgent-foreground:           var(red);
+    urgent-background:           var(background);
+    alternate-urgent-foreground: var(red);
+    alternate-urgent-background: var(lightbg);
+    active-foreground:           var(blue);
+    active-background:           var(background);
+    alternate-active-foreground: var(blue);
+    alternate-active-background: var(lightbg);
+    selected-normal-foreground:  var(background);
+    selected-normal-background:  var(accent);
+    selected-active-foreground:  var(background);
+    selected-active-background:  var(blue);
+    selected-urgent-foreground:  var(background);
+    selected-urgent-background:  var(red);
+    lightfg:                     var(base);
+    lightbg:                     var(crust);
+    separatorcolor:              var(foreground);
+    background-color:            transparent;
+    border-color:                var(foreground);
+    spacing:                     2;
+    accent:						 var(sky);
+    accentfg:					 var(sky);
+}

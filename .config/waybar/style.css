@@ -1,0 +1,331 @@
+@import "background-colours.css";
+
+* {
+    /* `otf-font-awesome` is required to be installed for icons */
+    font-family: GoogleSans-Regular;
+    font-size: 13px;
+    transition: none;
+    box-shadow: none;
+    font-weight: 500;
+}
+
+window#waybar {
+    background: none;
+    color: @text;
+    transition-property: background-color;
+    transition-duration: .5s;
+}
+
+window#waybar.hidden {
+    opacity: 0.2;
+}
+
+window#waybar.termite {
+    background-color: @surface0;
+}
+
+window#waybar.chromium {
+    background-color: @surface2;
+    border: none;
+}
+
+#workspaces, #window {
+	background-color: @base;
+	color: @text;
+	font-weight: 400;
+	transition: all 0.3s ease-out;
+}
+
+#workspaces {
+	border-radius: 16px 0px 0px 16px;
+	margin-left: 8px;
+	padding-left: 6px;
+	margin-right: -4px;
+}
+
+#window {
+	border-radius: 0px 16px 16px 0px;
+	padding-left: 16px;
+	padding-right: 16px;
+}
+
+window#waybar.empty #window {
+    padding-left: 0px;
+    padding-right: 16px;
+}
+
+#workspaces button {
+    color: @surface0;
+    background: none;
+    padding: 0px;
+    margin: 0 -4px;
+    border:none;
+    transition: all 0.3s ease-out;
+}
+
+#workspaces button.visible {
+}
+
+#workspaces button.focused {
+    color: @sky;
+}
+
+#workspaces button.urgent {
+    color: @red;
+}
+
+#mode {
+    background-color: @crust;
+    border-radius: 16px 16px 16px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+	margin-left: 8px;
+}
+
+#scratchpad {
+    background: @crust;
+    border-radius: 16px 16px 16px 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+   	margin-left: 8px;
+}
+
+#scratchpad.empty {
+	background: none;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#disk,
+#temperature,
+#backlight,
+#network,
+#pulseaudio,
+#wireplumber,
+#custom-media,
+#tray,
+#idle_inhibitor,
+#bluetooth,
+#language,
+#custom-notification,
+#mpd {
+    padding: 0 8px;
+    color: @text;
+    background-color: @base;
+}
+
+#clock {
+    border-radius: 0px 16px 16px 0px;
+   	padding-right: 16px;
+}
+
+#battery {
+    color: @text;
+}
+
+#battery.charging, #battery.plugged {
+    color: @green;
+}
+
+@keyframes blink {
+    to {
+        /*background-color: @base;*/
+        color: @base;
+    }
+}
+
+#battery.critical:not(.charging) {
+    color: @red;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+label:focus {
+    background-color: @text; /* ? */
+}
+
+#cpu {
+    color: @green;
+}
+
+#bluetooth {
+    color: @blue;
+    border-radius: 16px 0px 0px 16px;
+    margin-left: 8px;
+    padding-left: 16px;
+}
+
+#memory {
+    color: @mauve;
+}
+
+#disk {
+    color: @rosewater;
+}
+
+#backlight {
+    color: @sapphire;
+}
+
+#network {
+    color: @lavender;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+#pulseaudio {
+    color: @orange;
+}
+
+#pulseaudio.muted {
+    color: @sapphire;
+}
+
+#wireplumber {
+    color: @pink;
+}
+
+#wireplumber.muted {
+    color: @red;
+}
+
+#custom-media {
+    color: @teal;
+    min-width: 100px;
+}
+
+#custom-media.custom-spotify {
+    color: @green;
+}
+
+#custom-media.custom-vlc {
+    color: @peach;
+}
+
+#temperature {
+    color: @peach;
+    border-radius: 16px 16px 16px 16px;
+    margin-left: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+#temperature.critical {
+    color: @red;
+}
+
+#tray {
+    border-radius: 16px 16px 16px 16px;
+   	margin-left: 8px;
+   	padding-left: 10px;
+   	padding-right: 10px;
+}
+
+#tray > .passive {
+    -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+    background-color: @red;
+}
+
+#idle_inhibitor {
+    background-color: @base;
+    color: @text;
+}
+
+#idle_inhibitor.activated {
+    background-color: @text;
+    color: @base;
+}
+
+#mpd {
+    color: @teal;
+}
+
+#mpd.disconnected {
+    color: @red;
+}
+
+#mpd.stopped {
+    color: @teal;
+}
+
+#mpd.paused {
+    color: @sapphire;
+}
+
+#language {
+    color: @sapphire;
+    min-width: 16px;
+}
+
+#keyboard-state {
+    color: @lavender;
+    min-width: 16px;
+}
+
+#keyboard-state > label {
+    padding: 0 5px;
+}
+
+#keyboard-state > label.locked {
+    background: alpha(@base, 0.2);
+}
+
+tooltip {
+	color: @text;
+	background-color: @base;
+	text-shadow: none;
+}
+
+tooltip * {
+	color: @text;
+	text-shadow: none;
+}
+
+/* From https://github.com/PoSayDone/.dotfiles_wayland/tree/main */
+#custom-weather {
+    margin-left: 8px ;
+    border-radius: 16px;
+    padding: 0 16px;
+    background-color: @base;
+    color: @text;
+}
+
+/* From https://github.com/PoSayDone/.dotfiles_wayland/tree/main */
+#custom-powermenu {
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 8px;
+    color: @base;
+    background-color: @sky;
+    border-radius: 16px;
+    padding-left: 11px;
+    padding-right: 14px;
+}
+
+/* From https://github.com/PoSayDone/.dotfiles_wayland/tree/main */
+#custom-launcher {
+    border-radius: 16px;
+    color: @base;
+    background-color: @sky;
+    padding-left: 11px;
+    padding-right: 14px;
+}
+
+/* From https://github.com/PoSayDone/.dotfiles_wayland/tree/main */
+#custom-notification {
+    border-radius: 16px;
+    margin-left: 8px;
+    padding-left: 11px;
+    padding-right: 15px;
+}
