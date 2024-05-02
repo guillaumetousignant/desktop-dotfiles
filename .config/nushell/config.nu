@@ -865,4 +865,7 @@ $env.config = {
     ]
 }
 
+alias http = ^http
+
 use ~/.cache/starship/init.nu
+source ~/.cache/zoxide/init.nu
