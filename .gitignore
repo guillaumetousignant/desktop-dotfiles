@@ -29,7 +29,7 @@
 .config/micro/buffers
 !.config/neofetch
 !.config/nushell
-.config/nushell/history.txt
+.config/nushell/history.*
 !.config/rofi
 !.config/sway
 !.config/swaylock
