@@ -38,6 +38,12 @@
 !.icons
 !.local
 .local/*
+!.local/bin
+.local/bin/*
+!.local/bin/wake_screen.nu
+!.local/bin/scale_1.nu
+!.local/bin/scale_2.nu
+!.local/bin/scale_screen.nu
 !.local/share
 .local/share/*
 !.local/share/color-shemes

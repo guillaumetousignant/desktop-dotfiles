@@ -101,9 +101,16 @@
         "spacing": 10
     },
     "clock": {
-        // "timezone": "America/New_York",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": "{:%Y-%m-%d}"
+        // "timezone": "America/Montreal",
+        // "locale": "fr_CA.utf8",
+        "format": "{:L%e %b %R}",
+        "tooltip-format": "<tt>{calendar}</tt>",
+        "format-alt": "{:L%F}",
+        "calendar" : {
+        	"format": {
+        		"today": "<b>{}</b>"
+        	}
+        }
     },
     "cpu": {
         "format": "{usage}% ",
