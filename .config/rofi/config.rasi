@@ -12,6 +12,9 @@ configuration{
     display-window: " 﩯  Window";
     display-Network: " 󰤨  Network";
     sidebar-mode: true;
+    hover-select: true;
+    me-select-entry: "MousePrimary";
+    me-accept-entry: "!MousePrimary";
 }
 
 @theme "catppuccin-latte"
