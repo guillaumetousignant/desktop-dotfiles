@@ -25,3 +25,4 @@ def --env mkcd [
 
 use ~/.cache/starship/init.nu
 source ~/.cache/zoxide/init.nu
+source $"($nu.home-path)/.cargo/env.nu"

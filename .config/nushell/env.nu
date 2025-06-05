@@ -28,7 +28,6 @@ $env.SLANG_EDITOR = "micro +%d:1 %s"
 $env.GPG_TTY = (tty)
 
 $env.PATH = ($env.PATH | split row (char esep)
-  | prepend ($env.HOME | path join .cargo bin)
   | prepend ($env.HOME | path join .local bin)
   | uniq)
 
