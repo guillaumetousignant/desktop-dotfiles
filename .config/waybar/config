@@ -9,7 +9,7 @@
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["custom/launcher", "sway/workspaces", "sway/window", "sway/mode", "sway/scratchpad", "custom/weather", "custom/media"],
-    "modules-right": ["custom/notification", "tray", "bluetooth", "network", "pulseaudio", "battery", "battery#bat2", "clock", "custom/powermenu"],
+    "modules-right": ["custom/notification", "mpd", "tray", "bluetooth", "network", "pulseaudio", "battery", "battery#bat2", "clock", "custom/powermenu"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -64,9 +64,10 @@
         },
     },
     "mpd": {
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format-disconnected": "Disconnected ",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format": "{stateIcon} {artist} - {title} ",
+        "format-disconnected": "Déconnecté ",
+        "format-stopped": "Arrêté ",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
@@ -86,8 +87,8 @@
             "paused": "",
             "playing": ""
         },
-        "tooltip-format": "MPD (connected)",
-        "tooltip-format-disconnected": "MPD (disconnected)"
+        "tooltip-format": "MPD (connecté)",
+        "tooltip-format-disconnected": "MPD (déconnecté)"
     },
     "idle_inhibitor": {
         "format": "{icon}",
