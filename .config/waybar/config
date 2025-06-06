@@ -65,9 +65,9 @@
     },
     "mpd": {
         //"format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
-        "format": "{stateIcon} {artist} - {title} ",
+        "format": "{stateIcon}  {artist} - {title}",
         "format-disconnected": "Déconnecté ",
-        "format-stopped": "Arrêté ",
+        "format-stopped": "",
         "unknown-tag": "N/A",
         "interval": 2,
         "consume-icons": {
@@ -88,7 +88,12 @@
             "playing": ""
         },
         "tooltip-format": "MPD (connecté)",
-        "tooltip-format-disconnected": "MPD (déconnecté)"
+        "tooltip-format-disconnected": "MPD (déconnecté)",
+        "on-click": "foot -- rmpc",
+        "on-click-middle": "rmpc stop",
+        "on-click-right": "rmpc togglepause",
+        "on-scroll-up": "rmpc prev",
+        "on-scroll-down": "rmpc next"
     },
     "idle_inhibitor": {
         "format": "{icon}",

@@ -119,8 +119,12 @@ window#waybar.empty #window {
 #mpd {
 	border-radius: 16px 16px 16px 16px;
 	margin-left: 8px;
-	padding-left: 10px;
+	padding-left: 16px;
 	padding-right: 16px;
+}
+
+#mpd.playing {
+	color: @orange;
 }
 
 #clock {
