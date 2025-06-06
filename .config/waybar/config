@@ -87,7 +87,7 @@
             "paused": "",
             "playing": ""
         },
-        "tooltip-format": "MPD (connecté)",
+        "tooltip-format": "{album} - {date}",
         "tooltip-format-disconnected": "MPD (déconnecté)",
         "on-click": "foot -- rmpc",
         "on-click-middle": "rmpc stop",
