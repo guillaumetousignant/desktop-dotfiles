@@ -272,6 +272,8 @@ input * xkb_layout "ca"
 # Gaps
 #
 	gaps inner 8
+    gaps top -8
+    smart_gaps off
 #
 # Colours
 #

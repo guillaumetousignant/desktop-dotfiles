@@ -6,6 +6,7 @@
     "margin-top": 8,
     "margin-left": 8,
     "margin-right": 8,
+    "margin-bottom": 8,
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["custom/launcher", "sway/workspaces", "sway/window", "sway/mode", "sway/scratchpad", "custom/weather", "custom/media"],
