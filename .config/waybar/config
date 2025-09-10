@@ -209,14 +209,15 @@
         // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
     },
     "bluetooth": {
-   	    "format-disabled": "",
-   	    "format-off": "󰂲",
-   	    "format-on": "󰂯",
-   	    "format-connected": "󰂯 {device_alias}",
-   	    "format-connected-battery": "󰂯 {device_alias} 󱐋 {device_battery_percentage}%",
-   	    "on-click": "blueman-manager",
-   	    "tooltip": false
-   	},
+	    "format-disabled": "",
+	    "format-off": "󰂲",
+	    "format-on": "󰂯",
+	    "format-connected": "󰂯 {device_alias}",
+	    "format-connected-battery": "󰂯 {device_alias} 󱐋 {device_battery_percentage}%",
+	    "format-no-controller": "󰂲",
+	    "on-click": "blueman-manager",
+	    "tooltip": false
+	},
 
 	// Custom modules
 	// From https://github.com/PoSayDone/.dotfiles_wayland/tree/main

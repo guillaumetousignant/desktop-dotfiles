@@ -171,6 +171,10 @@ label:focus {
     padding-left: 16px;
 }
 
+#bluetooth.no-controller {
+	color: @surface0
+}
+
 #memory {
     color: @mauve;
 }
