@@ -10,6 +10,7 @@ if status is-interactive
     set -gx MOST_EDITOR "micro +%d:1 %s"
     set -gx SLANG_EDITOR "micro +%d:1 %s"
     set -gx GPG_TTY $(tty)
+    set -gx BEETSDIR $HOME/Musique/Musique
 
     fish_add_path $HOME/.cargo/bin
     fish_add_path $HOME/.local/bin

@@ -26,6 +26,7 @@ $env.PAGER = "/usr/bin/most"
 $env.MOST_EDITOR = "micro +%d:1 %s"
 $env.SLANG_EDITOR = "micro +%d:1 %s"
 $env.GPG_TTY = (tty)
+$env.BEETSDIR = ($env.HOME | path join Musique Musique)
 
 $env.PATH = ($env.PATH | split row (char esep)
   | prepend ($env.HOME | path join .local bin)
