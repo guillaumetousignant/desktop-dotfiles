@@ -49,7 +49,7 @@ output * bg /var/home/guillaume/Images/Backgrounds/bjmrab5o2h251.png fill
 output VGA-1 disable
 output DP-2 resolution 3840x2160 position 0,0 scale 2 adaptive_sync on
 #output DP-2 resolution 3840x2160 position 0,0 scale 2 adaptive_sync off
-output HDMI-A-1 resolution 1920x1200 position -1200,-600 transform 270
+output HDMI-A-1 resolution 1920x1200 position -1200,-400 transform 270
 
 workspace 1 output DP-2
 workspace 2 output HDMI-A-1
