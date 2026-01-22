@@ -54,6 +54,7 @@ output * max_render_time off
 
 workspace 1 output DP-2
 workspace 2 output HDMI-A-1
+workspace 1
 
 ### Idle configuration
 #
