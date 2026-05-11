@@ -46,6 +46,9 @@
 !.local/bin/scale_screen.nu
 !.local/bin/resolution_scale_screen.nu
 !.local/bin/normal_screen.nu
+!.local/bin/disable_secondary_screen.nu
+!.local/bin/enable_secondary_screen.nu
+!.local/bin/focus_main_screen.nu
 !.local/share
 .local/share/*
 !.local/share/color-shemes
