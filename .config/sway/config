@@ -34,6 +34,7 @@ set $menu $rofi_cmd -show drun -theme /var/home/guillaume/.config/rofi/themes/de
 
 set $browser_cmd firefox
 set $file_manager_cmd thunar
+set $emoji_picker_cmd flatpak run it.mijorus.smile
 
 ### Output configuration
 #
@@ -113,6 +114,9 @@ input "48879:57005:Mouse_passthrough_(absolute)" {
 
     # Start file manager
     bindsym $mod+m exec $file_manager_cmd
+
+    # Starr emoji picker
+    bindsym $mod+period exec $emoji_picker_cmd
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
