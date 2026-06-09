@@ -47,9 +47,14 @@ output * bg /var/home/guillaume/Images/Backgrounds/bjmrab5o2h251.png fill
 #   output HDMI-A-1 resolution 1920x1080 position 1920,0
 #
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+
 output VGA-1 disable
 output DP-2 resolution 3840x2160 position 0,0 scale 2 adaptive_sync on allow_tearing yes
 output HDMI-A-1 resolution 1920x1200 position -1200,-400 transform 270
+
+# Virtual monitor used for Sunshine
+exec swaymsg create_output HEADLESS-1
+output HEADLESS-1 mode 1920x1080 disable
 
 output * max_render_time off
 
@@ -93,7 +98,7 @@ input "48879:57005:Mouse_passthrough" {
 }
 
 input "48879:57005:Mouse_passthrough_(absolute)" {
-	map_to_output "DP-2"
+	map_to_output "HEADLESS-1"
 }
 
 ### Key bindings
