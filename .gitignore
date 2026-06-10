@@ -35,6 +35,7 @@
 !.config/sway
 !.config/swaylock
 !.config/waybar
+!.config/xdg-desktop-portal
 !.icons
 !.local
 .local/*
