@@ -56,4 +56,6 @@
 !.local/share/icons
 !.local/share/plasma
 !.local/share/rofi
+.local/share/icons/Superposition.png
+.local/share/icons/hicolor
 !.themes
